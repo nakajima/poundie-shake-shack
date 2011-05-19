@@ -8,9 +8,7 @@ class ShakeShack < Poundie::Plugin
   end
 
   action do |message|
-    doc = Nokogiri(get("http://shakeshack.com/mobile/shackcam/"))
-    img = doc.at("#content img.camimage")
-    speak img["src"].split("?").first
+    speak "http://www.shakeshack.com/camera.jpg"
   end
 end
 
